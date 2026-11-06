@@ -95,10 +95,185 @@
   });
 
   /* ----------------------------------------------------------
+     CATÁLOGO DE VEHÍCULOS: Búsqueda y Filtro por Marca
+  ---------------------------------------------------------- */
+  const vehicleCatalogData = [
+    {
+      brand: "Volkswagen",
+      id: "volkswagen",
+      models: [
+        'Línea VW 9" / VW Universal',
+        'Golf (2014 - 2020)',
+        'Fox (2014 - 2018)'
+      ]
+    },
+    {
+      brand: "Toyota",
+      id: "toyota",
+      models: [
+        'Hilux / Hilux Nueva',
+        'Corolla (2009) / Corolla Nuevo',
+        'Etios (2011+)',
+        'RAV4 (2006 - 2012) / RAV4 (2013 - 2017)'
+      ]
+    },
+    {
+      brand: "Honda",
+      id: "honda",
+      models: [
+        'Civic 8va Gen / Civic 9na Gen (2012 - 2015)',
+        'CR-V (2006 - 2012) / CR-V (2012+)',
+        'HR-V (2015 - 2020)',
+        'Fit (2008 - 2013)',
+        'City (2006) / City Auto AC (2008 - 2013)'
+      ]
+    },
+    {
+      brand: "Ford",
+      id: "ford",
+      models: [
+        'Ranger (2012)',
+        'Focus Automático (2007 - 2011)',
+        'Focus Manual (2007 - 2011 - 3 agujeros)',
+        'Focus (2012 - 2017)'
+      ]
+    },
+    {
+      brand: "Chevrolet",
+      id: "chevrolet",
+      models: [
+        'S10 (2015 / 2018)',
+        'Onix / Prisma / Spin',
+        'Captiva / Aveo / Lova / Gentra / Epica (2006)'
+      ]
+    },
+    {
+      brand: "Peugeot",
+      id: "peugeot",
+      models: [
+        '206',
+        '208 / 2008',
+        '307',
+        '308 / 408'
+      ]
+    },
+    {
+      brand: "Renault",
+      id: "renault",
+      models: [
+        'Alaskan / Frontier',
+        'Duster (2013 - 2017)',
+        'Logan / Sandero / Duster (2015 - 2017)',
+        'Logan / Sandero / Duster (2017+)'
+      ]
+    },
+    {
+      brand: "Jeep",
+      id: "jeep",
+      models: [
+        'Renegade',
+        'Compass (2011 - 2016) / Compass (2017)'
+      ]
+    },
+    {
+      brand: "Citroën",
+      id: "citroen",
+      models: [
+        'C4 (2008 - 2014)',
+        'C4 Lounge (2013 - 2017)'
+      ]
+    },
+    {
+      brand: "Fiat",
+      id: "fiat",
+      models: [
+        'Toro',
+        'Strada / Fiorino'
+      ]
+    },
+    {
+      brand: "Hyundai",
+      id: "hyundai",
+      models: [
+        'i10',
+        'Santa Fe (2006 - 2012)'
+      ]
+    },
+    {
+      brand: "Audi & Seat",
+      id: "audi-seat",
+      models: [
+        'Audi A3',
+        'Seat León (2005 - 2012)'
+      ]
+    }
+  ];
+
+  const searchInput = document.getElementById('vehicle-search');
+  const searchClear = document.getElementById('vehicle-search-clear');
+  const pillButtons = document.querySelectorAll('.v-pill');
+  const vehicleCards = document.querySelectorAll('.vehicle-card');
+  const noResultsMsg = document.getElementById('vehicles-no-results');
+
+  let activeBrandFilter = 'all';
+
+  function filterVehicles() {
+    const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+    let visibleCount = 0;
+
+    vehicleCards.forEach(card => {
+      const cardBrand = card.getAttribute('data-brand') || '';
+      const cardKeywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+      const cardText = card.innerText.toLowerCase();
+
+      const matchesBrand = (activeBrandFilter === 'all') || (cardBrand === activeBrandFilter);
+      const matchesSearch = !query || cardKeywords.includes(query) || cardText.includes(query);
+
+      if (matchesBrand && matchesSearch) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (noResultsMsg) {
+      noResultsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    if (searchClear) {
+      searchClear.style.display = query.length > 0 ? 'block' : 'none';
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', filterVehicles);
+  }
+
+  if (searchClear) {
+    searchClear.addEventListener('click', () => {
+      if (searchInput) {
+        searchInput.value = '';
+        searchInput.focus();
+      }
+      filterVehicles();
+    });
+  }
+
+  pillButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      pillButtons.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      activeBrandFilter = btn.getAttribute('data-filter') || 'all';
+      filterVehicles();
+    });
+  });
+
+  /* ----------------------------------------------------------
      SCROLL-IN ANIMATIONS (fade-up on viewport entry)
   ---------------------------------------------------------- */
   const animateEls = document.querySelectorAll(
-    '.product-card, .review-card, .blog-card, .sf-item, .trust-item, .faq-item'
+    '.product-card, .vehicle-card, .review-card, .blog-card, .sf-item, .trust-item, .faq-item'
   );
 
   const animObserver = new IntersectionObserver(

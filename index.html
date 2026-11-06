@@ -23,6 +23,7 @@
         <ul class="nav-list">
           <li><a href="#inicio" class="nav-link active">Inicio</a></li>
           <li><a href="#adaptabilidad" class="nav-link">Tecnología</a></li>
+          <li><a href="#vehiculos" class="nav-link">Vehículos</a></li>
           <li><a href="#faq" class="nav-link">Preguntas Frecuentes</a></li>
           <li><a href="#resenas" class="nav-link">Reseñas</a></li>
         </ul>
@@ -41,7 +42,7 @@
   ============================================================ -->
   <section id="inicio" class="hero">
     <div class="hero-bg">
-      <img src="BANNER.jpeg" alt="Interior de auto con estéreo Android Importado Multimedia" class="hero-img">
+      <img src="BANNER.jpg" alt="Interior de auto con estéreo Android Importado Multimedia" class="hero-img">
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
@@ -108,6 +109,256 @@
           <div class="adapt-image-glow"></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CATÁLOGO DE COMPATIBILIDAD DE VEHÍCULOS
+  ============================================================ -->
+  <section id="vehiculos" class="vehicles-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="label-tag">CATÁLOGO DE COMPATIBILIDAD</p>
+        <h2 class="section-title">PANTALLAS DISPONIBLES PARA<br><span>LOS SIGUIENTES VEHÍCULOS</span></h2>
+        <p class="section-desc">Elegí el modelo de tu auto o consultanos por WhatsApp para confirmar marco adaptador y compatibilidad exacta.</p>
+      </div>
+
+      <!-- BUSCADOR RÁPIDO & FILTRO POR MARCA -->
+      <div class="vehicles-filter-bar">
+        <div class="vehicles-search-wrapper">
+          <span class="vehicles-search-icon">🔍</span>
+          <input type="text" id="vehicle-search" class="vehicles-search-input" placeholder="Buscá tu marca o modelo (ej. Golf, Hilux, Civic, 208, Focus...)" autocomplete="off">
+          <button type="button" id="vehicle-search-clear" class="vehicles-search-clear" aria-label="Limpiar búsqueda" style="display:none;">&times;</button>
+        </div>
+        <div class="vehicles-pills" id="vehicles-pills">
+          <button type="button" class="v-pill active" data-filter="all">TODOS</button>
+          <button type="button" class="v-pill" data-filter="volkswagen">VOLKSWAGEN</button>
+          <button type="button" class="v-pill" data-filter="toyota">TOYOTA</button>
+          <button type="button" class="v-pill" data-filter="honda">HONDA</button>
+          <button type="button" class="v-pill" data-filter="ford">FORD</button>
+          <button type="button" class="v-pill" data-filter="chevrolet">CHEVROLET</button>
+          <button type="button" class="v-pill" data-filter="peugeot">PEUGEOT</button>
+          <button type="button" class="v-pill" data-filter="renault">RENAULT</button>
+          <button type="button" class="v-pill" data-filter="jeep">JEEP</button>
+          <button type="button" class="v-pill" data-filter="citroen">CITROËN</button>
+          <button type="button" class="v-pill" data-filter="fiat">FIAT</button>
+          <button type="button" class="v-pill" data-filter="hyundai">HYUNDAI</button>
+          <button type="button" class="v-pill" data-filter="audi-seat">AUDI & SEAT</button>
+        </div>
+      </div>
+
+      <!-- GRILLA DE VEHÍCULOS POR MARCA -->
+      <div class="vehicles-grid" id="vehicles-grid">
+
+        <!-- 1. VOLKSWAGEN -->
+        <article class="vehicle-card" data-brand="volkswagen" data-keywords="volkswagen vw linea 9 universal golf fox 2014 2015 2016 2017 2018 2019 2020">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Volkswagen</h3>
+              <span class="vehicle-brand-tag">3 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">Línea VW 9" / VW Universal</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Golf (2014 - 2020)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Fox (2014 - 2018)</span></li>
+          </ul>
+        </article>
+
+        <!-- 2. TOYOTA -->
+        <article class="vehicle-card" data-brand="toyota" data-keywords="toyota hilux nueva corolla 2009 nuevo etios 2011 rav4 2006 2012 2013 2017">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Toyota</h3>
+              <span class="vehicle-brand-tag">4 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">Hilux / Hilux Nueva</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Corolla (2009) / Corolla Nuevo</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Etios (2011+)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">RAV4 (2006 - 2012) / RAV4 (2013 - 2017)</span></li>
+          </ul>
+        </article>
+
+        <!-- 3. HONDA -->
+        <article class="vehicle-card" data-brand="honda" data-keywords="honda civic 8va 9na gen 2012 2015 cr-v crv 2006 hr-v hrv 2020 fit 2008 2013 city auto ac">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Honda</h3>
+              <span class="vehicle-brand-tag">5 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">Civic 8va Gen / Civic 9na Gen (2012 - 2015)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">CR-V (2006 - 2012) / CR-V (2012+)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">HR-V (2015 - 2020)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Fit (2008 - 2013)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">City (2006) / City Auto AC (2008 - 2013)</span></li>
+          </ul>
+        </article>
+
+        <!-- 4. FORD -->
+        <article class="vehicle-card" data-brand="ford" data-keywords="ford ranger 2012 focus automatico manual 2007 2008 2009 2010 2011 3 agujeros 2017">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Ford</h3>
+              <span class="vehicle-brand-tag">4 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">Ranger (2012)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Focus Automático (2007 - 2011)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Focus Manual (2007 - 2011 - 3 agujeros)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Focus (2012 - 2017)</span></li>
+          </ul>
+        </article>
+
+        <!-- 5. CHEVROLET -->
+        <article class="vehicle-card" data-brand="chevrolet" data-keywords="chevrolet chevy s10 2015 2018 onix prisma spin captiva aveo lova gentra epica 2006">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Chevrolet</h3>
+              <span class="vehicle-brand-tag">3 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">S10 (2015 / 2018)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Onix / Prisma / Spin</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Captiva / Aveo / Lova / Gentra / Epica (2006)</span></li>
+          </ul>
+        </article>
+
+        <!-- 6. PEUGEOT -->
+        <article class="vehicle-card" data-brand="peugeot" data-keywords="peugeot 206 208 2008 307 308 408">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Peugeot</h3>
+              <span class="vehicle-brand-tag">4 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">206</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">208 / 2008</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">307</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">308 / 408</span></li>
+          </ul>
+        </article>
+
+        <!-- 7. RENAULT -->
+        <article class="vehicle-card" data-brand="renault" data-keywords="renault alaskan frontier duster 2013 2014 2015 2016 2017 logan sandero">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Renault</h3>
+              <span class="vehicle-brand-tag">4 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">Alaskan / Frontier</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Duster (2013 - 2017)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Logan / Sandero / Duster (2015 - 2017)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Logan / Sandero / Duster (2017+)</span></li>
+          </ul>
+        </article>
+
+        <!-- 8. JEEP -->
+        <article class="vehicle-card" data-brand="jeep" data-keywords="jeep renegade compass 2011 2012 2013 2014 2015 2016 2017">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Jeep</h3>
+              <span class="vehicle-brand-tag">2 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">Renegade</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Compass (2011 - 2016) / Compass (2017)</span></li>
+          </ul>
+        </article>
+
+        <!-- 9. CITROËN -->
+        <article class="vehicle-card" data-brand="citroen" data-keywords="citroen citroën c4 2008 2009 2010 2011 2012 2013 2014 lounge 2017">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Citroën</h3>
+              <span class="vehicle-brand-tag">2 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">C4 (2008 - 2014)</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">C4 Lounge (2013 - 2017)</span></li>
+          </ul>
+        </article>
+
+        <!-- 10. FIAT -->
+        <article class="vehicle-card" data-brand="fiat" data-keywords="fiat toro strada fiorino">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Fiat</h3>
+              <span class="vehicle-brand-tag">2 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">Toro</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Strada / Fiorino</span></li>
+          </ul>
+        </article>
+
+        <!-- 11. HYUNDAI -->
+        <article class="vehicle-card" data-brand="hyundai" data-keywords="hyundai i10 santa fe 2006 2007 2008 2009 2010 2011 2012">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Hyundai</h3>
+              <span class="vehicle-brand-tag">2 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">i10</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Santa Fe (2006 - 2012)</span></li>
+          </ul>
+        </article>
+
+        <!-- 12. AUDI & SEAT -->
+        <article class="vehicle-card" data-brand="audi-seat" data-keywords="audi seat a3 leon 2005 2006 2007 2008 2009 2010 2011 2012">
+          <div class="vehicle-card-head">
+            <div class="vehicle-brand-icon">🚗</div>
+            <div>
+              <h3 class="vehicle-brand-name">Audi & Seat</h3>
+              <span class="vehicle-brand-tag">2 Modelos Compatibles</span>
+            </div>
+          </div>
+          <ul class="vehicle-model-list">
+            <li><span class="v-bullet">▸</span><span class="v-name">Audi A3</span></li>
+            <li><span class="v-bullet">▸</span><span class="v-name">Seat León (2005 - 2012)</span></li>
+          </ul>
+        </article>
+
+      </div>
+
+      <!-- MENSAJE SIN RESULTADOS -->
+      <div id="vehicles-no-results" class="vehicles-no-results" style="display: none;">
+        <p>No encontramos resultados para tu búsqueda.</p>
+        <span>¡No te preocupes! Tenemos marcos adaptadores para más vehículos del mercado. Consultanos directamente abajo.</span>
+      </div>
+
+      <!-- CIERRE DE SECCIÓN (CTA DE CONSULTA) -->
+      <div class="vehicles-cta-block">
+        <p class="vehicles-cta-legend">¿No encontrás el tuyo?</p>
+        <a href="https://api.whatsapp.com/send/?phone=5491172193223&text&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="btn btn-primary">
+          CONSULTANOS DISPONIBILIDAD
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -306,6 +557,7 @@
           <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#adaptabilidad">Tecnología</a></li>
+            <li><a href="#vehiculos">Vehículos</a></li>
             <li><a href="#faq">Preguntas Frecuentes</a></li>
             <li><a href="#resenas">Reseñas</a></li>
           </ul>
